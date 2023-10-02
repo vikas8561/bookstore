@@ -1,0 +1,22 @@
+table {
+    text-align: center;
+    color: teal;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 2px solid teal;
+    padding: 10px;
+    min-width: 160px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+.message {
+    color: red;
+}
+.adjust-edit {
+    margin-left: 12px;
+}

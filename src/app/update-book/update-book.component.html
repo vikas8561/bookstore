@@ -1,0 +1,16 @@
+<div class="update-book">
+    <h1>Update Book</h1>
+    <p style="color: green;">{{updateMessage}}</p>
+    <form #addBook="ngForm" class="form" (ngSubmit)="submit(addBook.value)">
+        <input class="input" type="text" placeholder="Enter Book Name" name="name" ngModel="{{bookData?.name}}">
+        <input class="input" type="text" placeholder="Enter Book Price" name="price" ngModel="{{bookData?.price}}">
+        <input class="input" type="text" placeholder="Enter Book Category" name="category" ngModel="{{bookData?.category}}">
+        <input class="input" type="text" placeholder="Enter Author Name" name="author" ngModel="{{bookData?.author}}">
+        <textarea class="input" type="text" placeholder="Enter Book Description" name="description" cols="30" rows="10" ngModel="{{bookData?.description}}"></textarea>
+        <input class="input" type="text" placeholder="Enter Book Image Url" name="image" ngModel="{{bookData?.image}}">
+
+        <button class="button">Update Book</button>
+        <!-- <p style="color: green;">{{addBookMessage}}</p> -->
+
+    </form>
+</div>

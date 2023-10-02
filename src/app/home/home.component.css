@@ -1,0 +1,30 @@
+img{
+    height: 200px;
+    width: 150px;
+}
+
+.book-details {
+    width: 300px;
+    height: 400px;
+    /* padding: 10px; */
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid grey;
+}
+.book-name {
+    text-align: center;
+}
+
+
+.book {
+    display: inline-block;
+}
+
+a {
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}

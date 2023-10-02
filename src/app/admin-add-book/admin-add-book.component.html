@@ -1,0 +1,20 @@
+<div class="add-book">
+    <h1>Add New Book</h1>
+    <form #addBook="ngForm" class="form" (ngSubmit)="submit(addBook.value)">
+        <input class="input" type="text" placeholder="Enter Book Name" name="name" ngModel #name="ngModel" required>
+        <p class="invalid-input"><span *ngIf= "name.invalid && name.touched">Please enter valid input</span></p>
+        <input class="input" type="text" placeholder="Enter Book Price" name="price" ngModel #price="ngModel" required>
+        <p class="invalid-input"><span *ngIf= "price.invalid && price.touched">Please enter valid input</span></p>
+        <input class="input" type="text" placeholder="Enter Book Category" name="category" ngModel #category="ngModel" required>
+        <p class="invalid-input"><span *ngIf= "category.invalid && category.touched">Please enter valid input</span></p>
+        <input class="input" type="text" placeholder="Enter Author Name" name="author" ngModel #author="ngModel" required>
+        <p class="invalid-input"><span *ngIf= "author.invalid && author.touched">Please enter valid input</span></p>
+        <textarea class="input" type="text" placeholder="Enter Book Description" name="description" cols="30" rows="10" ngModel #description="ngModel" required></textarea>
+        <p class="invalid-input"><span *ngIf= "description.invalid && description.touched">Please enter valid input</span></p>
+        <input class="input" type="text" placeholder="Enter Book Image Url" name="image" ngModel #image="ngModel" required>
+        <p class="invalid-input"><span *ngIf= "image.invalid && image.touched">Please enter valid input</span></p>
+        <button class="button" [disabled]="addBook.invalid">Add Book</button>
+        <p style="color: green;">{{addBookMessage}}</p>
+
+    </form>
+</div>

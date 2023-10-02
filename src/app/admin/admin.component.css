@@ -1,0 +1,17 @@
+.signup, .login {
+    text-align: center;
+}
+.signup h1, .login h1 {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color: teal;
+}
+
+p a {
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+.error {
+    color: red;
+}

@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    color: teal;
+}
+.invalid-input, .errp {
+    /* margin-right: 235px; */
+    color: red;
+    font-size: 12px;
+    margin-top: 0px;
+}
+button:disabled{
+    cursor: not-allowed;
+}

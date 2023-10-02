@@ -1,0 +1,32 @@
+<nav class="nav">
+    <h1><a routerLink="">Bookstore</a></h1>
+    <div *ngIf="menuType === 'default'" class="search-bar">
+        <input type="text" (keyup)="searchProduct($event)" #searchInput placeholder="Search Books">
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <!-- <li *ngFor="let item of searchResult">
+            <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
+          </li> -->
+    </div>
+    <div [ngSwitch] = "menuType">
+        <ul *ngSwitchCase = "'default'">
+            <!-- <li><a routerLink="admin"></a></li> -->
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="user">Login</a></li>
+            <li><a href="#">Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase = "'user'">
+            <!-- <li><a routerLink="admin"></a></li> -->
+            <li><a routerLink="">Home</a></li>
+            <li><a >{{userName | titlecase}}</a></li>
+            <li><a (click)="userLogout()">Logout</a></li>
+            <li><a href="#">Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase = "'admin'">
+            <li><a routerLink="admin-add-book">Add Books</a></li>
+            <li><a routerLink="admin-home">List</a></li>
+            <li><a (click)="LogOut()">Logout</a></li>
+            <li><a href="#">{{adminName | titlecase}}</a></li>
+        </ul>
+    </div>
+    
+</nav>

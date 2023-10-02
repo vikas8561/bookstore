@@ -1,0 +1,30 @@
+<div class="book-list">
+    <h3 style="color: crimson; text-align: center;">Book List</h3>
+    <p class="message">{{bookMessage}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of bookList">
+                <td><img src="{{item.image}}" alt=""></td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.author}}</td>
+                <td>{{item.description}}</td>
+                <td><fa-icon (click)="deleteBook(item.id)" [icon] = "icon"></fa-icon>
+                <a class="adjust-edit" routerLink="/update-book/{{item.id}}" ><fa-icon [icon]="iconEdit"></fa-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

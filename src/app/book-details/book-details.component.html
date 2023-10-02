@@ -1,0 +1,33 @@
+<div class="row-book-details" *ngIf="bookData">
+    <div class="col-sm-6">
+        <img class="book-img" src="{{bookData.image}}" alt="">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h1>{{bookData.name}}</h1>
+            <h3><span>&#8377;</span>{{bookData.price}}</h3>
+            <h4><span style="color: blue;">Author :</span> {{bookData.author}}</h4>
+            <h4><span style="color: blue;">Category :</span> {{bookData.category}}</h4>
+            <div class="desc">
+                <h5><span style="color: blue;">Description :</span> {{bookData.description}}</h5>
+            </div>
+            
+            <div class="cart">
+                <button class="btn">Buy Now</button>
+                <button *ngIf="!removeCart" class="btn1" (click)="addToCart()" >Add to Cart</button>
+                <button *ngIf="removeCart" class="btn1" (click)="removeToCart(bookData.id)" >Remove to Cart</button>
+
+            </div>
+            <div class="inp">
+                <form id='myform' method='POST' class='quantity' action='#'>
+                    <input type='button' value='-' class='qtyminus minus' field='quantity' (click)="handleQuantity('min')" />
+                    <input type='text' name='quantity' value="{{bookQuantity}}" class='qty' />
+                    <input type='button' value='+' class='qtyplus plus' field='quantity' (click)="handleQuantity('plus')"  />
+                  </form>
+            </div>
+            
+            
+
+        </div>
+    </div>
+</div>
